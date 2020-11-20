@@ -22,3 +22,4 @@ Route::get('/about', function () {
 });
 
 Route::get('/contact', [FirstController::class, 'index']);
+Route::view('no', 'no');
