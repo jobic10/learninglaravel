@@ -19,10 +19,8 @@ Route::get('/', function () {
 
 Route::view('no', 'no');
 
-Route::group(['middleware' => 'age'], function () {
-    Route::get('/contact', [FirstController::class, 'index']);
+Route::get('/contact', [FirstController::class, 'index']);
 
-    Route::get('/about', function () {
-        return view('about');
-    });
-});
+Route::get('/about', function () {
+    return view('about');
+})->middleware('ageCheck');
