@@ -70,3 +70,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     - Folder and File Structure (Still looking complex to me, though!)
     - Modified default welcome.blade.php file
     - Created new route (/about) alongside a new view for the route
+    - Quick intro to controllers (I did not run `php artisan make:controller` yet)
