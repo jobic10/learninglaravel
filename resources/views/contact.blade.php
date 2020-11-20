@@ -12,5 +12,6 @@
     <h1>Welcome to our contact page</h1>
     <input type="text" placeholder="username" id="">
 </body>
+<x-footer />
 
 </html>
