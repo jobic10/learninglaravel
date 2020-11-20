@@ -73,3 +73,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     - Quick intro to Controllers
     - Quick intro to Components
         - Passing value to Components
+
+- **Day 2:**
+    - Learnt Middlewares (Created AgeCheck Middleware)
+    
