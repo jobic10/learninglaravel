@@ -24,3 +24,9 @@ Route::get('/contact', [FirstController::class, 'index']);
 Route::get('/about', function () {
     return view('about');
 })->middleware('ageCheck');
+
+Route::get('login', function () {
+    return view('login');
+});
+
+Route::post('login/process', [FirstController::class, 'login']);

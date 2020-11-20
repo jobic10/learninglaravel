@@ -10,4 +10,8 @@ class FirstController extends Controller
     {
         return view('contact');
     }
+    public function login()
+    {
+        return "Form received";
+    }
 }
