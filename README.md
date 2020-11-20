@@ -76,4 +76,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 - **Day 2:**
     - Learnt Middlewares (Created AgeCheck Middleware)
-    
+        - Global Middleware - Registered AgeCheck As Global
