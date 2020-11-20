@@ -68,3 +68,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     - What is Composer ?
     - Installing Laravel
     - Folder and File Structure (Still looking complex to me, though!)
+    - Modified default welcome.blade.php file
