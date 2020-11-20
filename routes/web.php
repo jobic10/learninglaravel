@@ -17,9 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/contact', [FirstController::class, 'index']);
 Route::view('no', 'no');
+
+Route::group(['middleware' => 'age'], function () {
+    Route::get('/contact', [FirstController::class, 'index']);
+
+    Route::get('/about', function () {
+        return view('about');
+    });
+});
