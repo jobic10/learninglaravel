@@ -11,9 +11,11 @@ class Footer extends Component
      *
      * @return void
      */
-    public function __construct()
+    public $year;
+    public function __construct($year)
     {
         //
+        $this->year = $year;
     }
 
     /**

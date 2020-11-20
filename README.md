@@ -72,3 +72,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     - Created new route (/about) alongside a new view for the route
     - Quick intro to Controllers
     - Quick intro to Components
+        - Passing value to Components
