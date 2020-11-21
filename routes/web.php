@@ -35,3 +35,5 @@ Route::view('profile', 'profile');
 Route::post('login/process', [FirstController::class, 'login']);
 Route::get('logout', [FirstController::class, 'logout']);
 Route::match(['get', 'post'], '/memberform', [FirstController::class, 'member']);
+Route::view('welcome', 'welcome');
+Route::get('students', [FirstController::class, 'fetchStudent']);

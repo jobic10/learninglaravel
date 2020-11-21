@@ -90,3 +90,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     - File Upload
         - `store`
         - `storeAs`
+    - Localization
+    - Model
+        - Connecting To Database Using `.env` file
+        - Fetch Records Using Model 

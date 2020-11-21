@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Student;
 
 class FirstController extends Controller
 {
@@ -44,5 +45,9 @@ class FirstController extends Controller
             $request->session()->flash('flash_user', $path);
         }
         return view('add_member');
+    }
+    function fetchStudent()
+    {
+        return Student::all();
     }
 }
