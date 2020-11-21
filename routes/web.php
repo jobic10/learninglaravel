@@ -26,6 +26,9 @@ Route::get('/about', function () {
 })->middleware('ageCheck');
 
 Route::get('login', function () {
+    if (session()->has('user')) {
+        return redirect('profile');
+    }
     return view('login');
 });
 Route::view('profile', 'profile');

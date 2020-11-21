@@ -83,3 +83,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         - PUT. POST, DELETE, PATCH, GET Form Methods
         - Quick Intro To Form Validation
     - Brief Intro To Session
+        - put and has
+        - Check if session key exists and redirect based on condition check
