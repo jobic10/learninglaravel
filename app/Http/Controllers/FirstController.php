@@ -48,6 +48,7 @@ class FirstController extends Controller
     }
     function fetchStudent()
     {
-        return Student::all();
+        $students = Student::all();
+        return view('students', ['students' => $students]);
     }
 }

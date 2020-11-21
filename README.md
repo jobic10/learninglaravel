@@ -94,3 +94,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     - Model
         - Connecting To Database Using `.env` file
         - Fetch Records Using Model 
+        - Displaying fetched records in view
