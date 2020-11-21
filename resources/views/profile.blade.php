@@ -10,6 +10,8 @@
 
 <body>
     <h1>Dear {{ session('user') }}, welcome to your profile.</h1>
+    <a href="logout">Logout</a>
+    <x-footer year="2020" />
 </body>
 
 </html>

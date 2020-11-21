@@ -21,4 +21,11 @@ class FirstController extends Controller
         return redirect('profile');
         return $request->input();
     }
+    public function logout()
+    {
+        if (session()->has('user')) {
+            $value = session()->pull('user');
+        }
+        return redirect('login');
+    }
 }

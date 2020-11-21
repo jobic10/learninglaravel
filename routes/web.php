@@ -33,3 +33,4 @@ Route::get('login', function () {
 });
 Route::view('profile', 'profile');
 Route::post('login/process', [FirstController::class, 'login']);
+Route::get('logout', [FirstController::class, 'logout']);
