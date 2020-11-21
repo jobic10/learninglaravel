@@ -31,6 +31,14 @@ class FirstController extends Controller
     public function member(Request $request)
     {
         if ($request->isMethod('POST')) {
+            $request->validate(
+                [
+                    'username' => 'required',
+                    'password' => 'required',
+                    'email' => 'required|email',
+                    'passport' => 'required'
+                ]
+            );
             $data = $request->input('username');
             $path = $request->file('passport')->store('upload');
             $request->session()->flash('flash_user', $path);
