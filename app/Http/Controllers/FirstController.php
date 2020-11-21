@@ -32,7 +32,8 @@ class FirstController extends Controller
     {
         if ($request->isMethod('POST')) {
             $data = $request->input('username');
-            $request->session()->flash('flash_user', $data);
+            $path = $request->file('passport')->store('upload');
+            $request->session()->flash('flash_user', $path);
             return view('add_member');
         } else {
             return view('add_member');

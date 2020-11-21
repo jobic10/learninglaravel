@@ -87,3 +87,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         - Check if session key exists and redirect based on condition check
         - `pull` in sessions 
     - Flash Session
+    - File Upload

@@ -13,7 +13,7 @@
         <h4 style="color:blue">{{ session('flash_user') }} has been added</h4>
     @endif
     <h3>Please Fill All Fields</h3>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         @csrf
         <table border="1">
             <tr>
@@ -32,6 +32,12 @@
                 <th>Password</th>
                 <td><input type="password" name="password" id="">
                     <span style="color:red">@error('password') {{ $message }}@enderror</span>
+                </td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td><input type="file" name="passport" id="">
+                    <span style="color:red">@error('passport') {{ $message }}@enderror</span>
                 </td>
             </tr>
             <tr>
