@@ -34,9 +34,7 @@ class FirstController extends Controller
             $data = $request->input('username');
             $path = $request->file('passport')->store('upload');
             $request->session()->flash('flash_user', $path);
-            return view('add_member');
-        } else {
-            return view('add_member');
         }
+        return view('add_member');
     }
 }
