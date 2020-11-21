@@ -15,11 +15,15 @@
         <table border="1">
             <tr>
                 <th>Username</th>
-                <td><input type="text" name="username" id=""></td>
+                <td><input type="text" name="username" id="">
+                    <span style="color:red">@error('username') {{ $message }}@enderror</span>
+                </td>
             </tr>
             <tr>
                 <th>Password</th>
-                <td><input type="password" name="password" id=""></td>
+                <td><input type="password" name="password" id="">
+                    <span style="color:red">@error('password') {{ $message }}@enderror</span>
+                </td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" value="Submit"></td>

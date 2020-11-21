@@ -81,3 +81,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         - Route Middleware - Registered AgeCheck As Route
     - Forms
         - PUT. POST, DELETE, PATCH, GET Form Methods
+        - Quick Intro To Form Validation

@@ -10,8 +10,13 @@ class FirstController extends Controller
     {
         return view('contact');
     }
-    public function login()
+    public function login(Request $request)
     {
-        return "Form received";
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+
+        ]);
+        return $request->input();
     }
 }
