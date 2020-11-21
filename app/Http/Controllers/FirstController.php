@@ -48,7 +48,7 @@ class FirstController extends Controller
     }
     function fetchStudent()
     {
-        $students = Student::all();
+        $students = Student::paginate(4);
         return view('students', ['students' => $students]);
     }
 }

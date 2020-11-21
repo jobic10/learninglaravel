@@ -18,3 +18,13 @@
         </tr>
     @endforeach
 </table>
+
+
+{{ $students->links() }}
+
+<style>
+    .w-5 {
+        display: none
+    }
+
+</style>
