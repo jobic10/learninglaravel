@@ -75,10 +75,10 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         - Passing value to Components
 
 - **Day 2:**
-    - Learnt Middlewares (Created AgeCheck Middleware)
-        - Global Middleware - Registered AgeCheck As Global
-        - Group Middleware - Registered AgeCheck As Group
-        - Route Middleware - Registered AgeCheck As Route
+    - Learnt Middlewares (Created `AgeCheck` Middleware)
+        - Global Middleware - Registered `AgeCheck` As Global
+        - Group Middleware - Registered `AgeCheck` As Group
+        - Route Middleware - Registered `AgeCheck` As Route
     - Forms
         - PUT. POST, DELETE, PATCH, GET Form Methods
         - Quick Intro To Form Validation
@@ -86,3 +86,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         - `put` and `has`
         - Check if session key exists and redirect based on condition check
         - `pull` in sessions 
+    - Flash Session
