@@ -28,5 +28,5 @@ Route::get('/about', function () {
 Route::get('login', function () {
     return view('login');
 });
-
+Route::view('profile', 'profile');
 Route::post('login/process', [FirstController::class, 'login']);

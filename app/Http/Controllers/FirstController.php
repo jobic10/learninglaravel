@@ -17,6 +17,8 @@ class FirstController extends Controller
             'password' => 'required',
 
         ]);
+        session()->put('user', $request->username);
+        return redirect('profile');
         return $request->input();
     }
 }
