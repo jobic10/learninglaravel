@@ -42,7 +42,13 @@ class FirstController extends Controller
             );
             $data = $request->input('username');
             $path = $request->file('passport')->store('upload');
-            $request->session()->flash('flash_user', $path);
+            $student = new Student;
+            $student->username = $request->username;
+            $student->email = $request->email;
+            $student->passport = $path;
+            $student->password = $request->password;
+            $student->save();
+            $request->session()->flash('flash_user', "User has been added");
         }
         return view('add_member');
     }
