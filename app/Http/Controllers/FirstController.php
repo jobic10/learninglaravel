@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Student;
 
+use function PHPUnit\Framework\isNull;
+
 class FirstController extends Controller
 {
     public function index()
@@ -60,8 +62,12 @@ class FirstController extends Controller
     function delStudent(Request $request, $id)
     {
         $student = Student::find($id);
-        $student->delete();
-        $request->session()->flash('flash_user', "User has been deleted");
+        if (!is_null($student)) {
+            $student->delete();
+            $request->session()->flash('flash_user', "User has been deleted");
+        } else {
+            $request->session()->flash('flash_user', 'User not found');
+        }
         return redirect('memberform');
     }
 }

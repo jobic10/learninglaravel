@@ -10,7 +10,7 @@
 
 <body>
     @if (session('flash_user'))
-        <h4 style="color:blue">{{ session('flash_user') }} has been added</h4>
+        <h4 style="color:blue">{{ session('flash_user') }}</h4>
     @endif
     <h3>Please Fill All Fields</h3>
     <form action="" method="post" enctype="multipart/form-data">

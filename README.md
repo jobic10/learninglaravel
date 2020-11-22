@@ -103,3 +103,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     - Displayed records from saved entries
     - Symbolic Links
     - Deleting Database records
+    - Deleting Database records (Safely)
