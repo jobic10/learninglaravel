@@ -50,7 +50,7 @@ class FirstController extends Controller
             $student->save();
             $request->session()->flash('flash_user', "User has been added");
         }
-        return view('add_member');
+        return view('add_member', ['students' => Student::all()]);
     }
     function fetchStudent()
     {

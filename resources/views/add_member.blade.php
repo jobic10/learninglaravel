@@ -45,6 +45,24 @@
             </tr>
         </table>
     </form>
+
+    <h4>List of previously entered data</h4>
+    <table border="1">
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Passport</th>
+        </tr>
+        @foreach ($students as $student)
+            <tr>
+                <td>{{ $student->username }}</td>
+                <td>{{ $student->email }}</td>
+                <td>{{ $student->password }}</td>
+                <td>{{ $student->passport }}</td>
+            </tr>
+        @endforeach
+    </table>
 </body>
 
 </html>
