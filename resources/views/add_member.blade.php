@@ -18,22 +18,24 @@
         <table border="1">
             <tr>
                 <th>Username</th>
-                <td><input type="text" name="username" id="">
+                <td><input value="{{ $student->username ?? '' }}" type="text" name="username" id="">
                     <span style="color:red">@error('username') {{ $message }}@enderror</span>
                 </td>
             </tr>
             <tr>
                 <th>Email</th>
-                <td><input type="email" name="email" id="">
+                <td><input value="{{ $student->email ?? '' }}" type="email" name="email" id="">
                     <span style="color:red">@error('email') {{ $message }}@enderror</span>
                 </td>
             </tr>
             <tr>
                 <th>Password</th>
-                <td><input type="password" name="password" id="">
+                <td><input value="{{ $student->password ?? '' }}" type="password" name="password" id="">
                     <span style="color:red">@error('password') {{ $message }}@enderror</span>
                 </td>
             </tr>
+
+
             <tr>
                 <th>Image</th>
                 <td><input type="file" name="passport" id="">
@@ -62,8 +64,11 @@
                 <td>{{ $student->username }}</td>
                 <td>{{ $student->email }}</td>
                 <td>{{ $student->password }}</td>
-                <td><img heigh='80' width='80' src="{{ asset($student->passport) }}" /></td>
-                <td><a href="delete/{{ $student->id }}">Delete</a></td>
+                <td><img height='80' width='80' src="{{ asset($student->passport) }}" /></td>
+                <td>
+                    <a href="delete/{{ $student->id }}">Delete</a> -
+                    <a href="update/{{ $student->id }}">Update</a>
+                </td>
 
             </tr>
         @endforeach

@@ -38,3 +38,4 @@ Route::match(['get', 'post'], '/memberform', [FirstController::class, 'member'])
 Route::view('welcome', 'welcome');
 Route::get('students', [FirstController::class, 'fetchStudent']);
 Route::get('delete/{id}', [FirstController::class, 'delStudent']);
+Route::match(['GET', 'POST'], 'update/{id}', [FirstController::class, 'updateStudent']);

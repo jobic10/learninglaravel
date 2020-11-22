@@ -15,8 +15,8 @@ class Student extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('username', 50)->unique();
-            $table->string('email', 70)->unique();
+            $table->string('username', 50);
+            $table->string('email', 70);
             $table->string('password', 32);
             $table->string('passport');
             $table->timestamps();
@@ -30,6 +30,6 @@ class Student extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('students');
     }
 }

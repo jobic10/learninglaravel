@@ -70,4 +70,35 @@ class FirstController extends Controller
         }
         return redirect('memberform');
     }
+    function updateStudent(Request $request, $id)
+    {
+        $student = Student::find($id);
+        if (!is_null($student)) {
+            if ($request->isMethod('POST')) {
+                $request->validate(
+                    [
+                        'username' => 'required',
+                        'password' => 'required',
+                        'email' => 'required|email',
+                        'passport' => 'required'
+                    ]
+                );
+                $path = $request->file('passport')->store('upload');
+                $student->username = $request->username;
+                $student->email = $request->email;
+                $student->passport = $path;
+                $student->password = $request->password;
+                $student->save();
+                $request->session()->flash('flash_user', "User has been updated");
+            } else {
+                return view('add_member', [
+                    'students' => Student::all(),
+                    'student' => $student
+                ]);
+            }
+            return redirect('memberform');
+        } else {
+            $request->session()->flash('flash_user', 'User not found');
+        }
+    }
 }
