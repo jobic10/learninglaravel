@@ -96,3 +96,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         - Fetch Records Using Model 
         - Displaying fetched records in view
     - Pagination
+
+- **Day 3:**
+    - Creating Database tables
