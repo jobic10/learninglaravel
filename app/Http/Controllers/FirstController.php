@@ -57,4 +57,11 @@ class FirstController extends Controller
         $students = Student::paginate(4);
         return view('students', ['students' => $students]);
     }
+    function delStudent(Request $request, $id)
+    {
+        $student = Student::find($id);
+        $student->delete();
+        $request->session()->flash('flash_user', "User has been deleted");
+        return redirect('memberform');
+    }
 }

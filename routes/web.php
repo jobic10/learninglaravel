@@ -37,3 +37,4 @@ Route::get('logout', [FirstController::class, 'logout']);
 Route::match(['get', 'post'], '/memberform', [FirstController::class, 'member']);
 Route::view('welcome', 'welcome');
 Route::get('students', [FirstController::class, 'fetchStudent']);
+Route::get('delete/{id}', [FirstController::class, 'delStudent']);

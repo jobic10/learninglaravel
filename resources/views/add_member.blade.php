@@ -54,6 +54,7 @@
             <th>Email</th>
             <th>Password</th>
             <th>Passport</th>
+            <th>Action</th>
         </tr>
         @foreach ($students as $student)
             <tr>
@@ -61,7 +62,9 @@
                 <td>{{ $student->username }}</td>
                 <td>{{ $student->email }}</td>
                 <td>{{ $student->password }}</td>
-                <td><img src="{{ asset($student->passport) }}" /></td>
+                <td><img heigh='80' width='80' src="{{ asset($student->passport) }}" /></td>
+                <td><a href="delete/{{ $student->id }}">Delete</a></td>
+
             </tr>
         @endforeach
     </table>
