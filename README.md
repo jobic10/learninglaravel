@@ -101,3 +101,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     - Creating Database tables
     - Saving data to database 
     - Displayed records from saved entries
+    - Symbolic Links

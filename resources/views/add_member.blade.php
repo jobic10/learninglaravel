@@ -49,6 +49,7 @@
     <h4>List of previously entered data</h4>
     <table border="1">
         <tr>
+            <th>ID</th>
             <th>Username</th>
             <th>Email</th>
             <th>Password</th>
@@ -56,10 +57,11 @@
         </tr>
         @foreach ($students as $student)
             <tr>
+                <td>{{ $student->id }}</td>
                 <td>{{ $student->username }}</td>
                 <td>{{ $student->email }}</td>
                 <td>{{ $student->password }}</td>
-                <td>{{ $student->passport }}</td>
+                <td><img src="{{ asset($student->passport) }}" /></td>
             </tr>
         @endforeach
     </table>
