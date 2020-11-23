@@ -108,3 +108,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 - **Day 4:**
     - Seeding (`php artisan make:seeder StudentSeeder`)
+    - Accessors
