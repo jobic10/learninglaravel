@@ -12,4 +12,9 @@ class Student extends Model
     {
         return ucfirst($value);
     }
+
+    public function setUsernameAttribute($value)
+    {
+        $this->attributes['username'] =  strtolower($value);
+    }
 }
