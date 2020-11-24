@@ -112,3 +112,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 - **Day 5:**
     - Mutators
+    - Relationships
+        - One to One 
+
+
+### Stackoverflow to the rescue
+#### Be sure to check the Laravel version in these questions/answers
+- https://stackoverflow.com/questions/41259651/general-error-1005-cant-create-table-foreign-key-constraint-is-incorrectly-fo
+
+- https://stackoverflow.com/questions/50221670/how-to-define-a-one-way-one-to-one-relationship-in-laravel-5-4-eloquent

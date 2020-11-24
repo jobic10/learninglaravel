@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
+
+    public function phone()
+    {
+        return $this->hasOne('App\Models\Phone');
+    }
+
     public function getEmailAttribute($value)
     {
         return ucfirst($value);
