@@ -54,6 +54,7 @@
             <th>ID</th>
             <th>Username</th>
             <th>Email</th>
+            <th>Phone</th>
             <th>Password</th>
             <th>Passport</th>
             <th>Action</th>
@@ -63,6 +64,7 @@
                 <td>{{ $student->id }}</td>
                 <td>{{ $student->username }}</td>
                 <td>{{ $student->email }}</td>
+                <td>{{ $student->phone->tel }}</td>
                 <td>{{ $student->password }}</td>
                 <td><img height='80' width='80' src="{{ asset($student->passport) }}" /></td>
                 <td>
