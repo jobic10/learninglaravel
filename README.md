@@ -112,6 +112,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 - **Day 5:**
     - Mutator
+    - Rollback in migration
     - Relationships
         - One to One 
 
