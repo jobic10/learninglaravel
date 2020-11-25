@@ -120,6 +120,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         - One to Many
     - Stub
         - Controller Stub
+        - Model Stub
 
 
 ### Stackoverflow to the rescue
