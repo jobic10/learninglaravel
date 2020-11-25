@@ -118,6 +118,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - **Day 6:**
     - Relationships
         - One to Many
+    - Stub
+        - Controller Stub
 
 
 ### Stackoverflow to the rescue
