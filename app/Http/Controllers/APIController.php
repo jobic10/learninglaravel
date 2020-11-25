@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
+use Validator;
 
 class APIController extends Controller
 {
@@ -14,10 +15,17 @@ class APIController extends Controller
     }
     public function addStudent(Request $request)
     {
-        if (!isset($request->username, $request->email, $request->password) || is_null($request->file('passport'))) {
+        $rules = array(
+            'username' => 'required',
+            'password' => 'required',
+            'email' => 'required|email',
+            'passport' => 'required'
+        );
+        $validate = Validator::make($request->all(), $rules);
+        if ($validate->fails()) {
             return [
                 'status' => -1,
-                'msg' => 'Please, fill in all fields!'
+                'errors' => $validate->errors()
             ];
         }
         $student = new Student;
@@ -26,17 +34,18 @@ class APIController extends Controller
         $student->password = $request->password;
         $path = $request->file('passport')->store('upload');
         $student->passport = $path;
-        $save = $student->save();
-        if ($save) {
+        try {
+            $save = $student->save();
             return [
                 'status' => 1,
                 'msg' => 'Saved',
                 'id' => $student->id
             ];
-        } else {
+        } catch (\Exception $e) {
             return [
                 'status' => 0,
-                'msg' => 'Form Not Saved'
+                'msg' => 'Form Not Saved',
+                'error' => $e->getMessage()
             ];
         }
     }
