@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
+use App\Http\Controllers\StudentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,3 +40,5 @@ Route::view('welcome', 'welcome');
 Route::get('students', [FirstController::class, 'fetchStudent']);
 Route::get('delete/{id}', [FirstController::class, 'delStudent']);
 Route::match(['GET', 'POST'], 'update/{id}', [FirstController::class, 'updateStudent']);
+
+Route::get('student/{id}', [StudentController::class, 'index']);
