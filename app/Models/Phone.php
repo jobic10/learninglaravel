@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Phone extends Model
 {
     use HasFactory;
-    public function user()
+    public function student()
     {
         return $this->belongsTo('App\Models\Student');
     }
