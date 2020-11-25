@@ -123,6 +123,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         - Model Stub
     - Fluent Strings
     - Route Model Binding
+    - Creating Custom Command
 
 
 ### Stackoverflow to the rescue
