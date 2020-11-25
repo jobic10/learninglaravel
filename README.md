@@ -132,6 +132,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         - DELETE => Delete Data
         - Search for data using GET
         - Validation
+        - HTTP Response code. Used 401 for failed validations
 
 
 ### Stackoverflow to the rescue

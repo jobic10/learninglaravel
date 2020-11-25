@@ -23,10 +23,14 @@ class APIController extends Controller
         );
         $validate = Validator::make($request->all(), $rules);
         if ($validate->fails()) {
-            return [
-                'status' => -1,
-                'errors' => $validate->errors()
-            ];
+            return
+                response()->json(
+                    [
+                        'status' => -1,
+                        'errors' => $validate->errors()
+                    ],
+                    401
+                );
         }
         $student = new Student;
         $student->username = $request->username;
