@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get("getStudent", [APIController::class, 'getStudent']);
 Route::post("addStudent", [APIController::class, 'addStudent']);
+Route::patch("editStudent/{student_id}", [APIController::class, 'editStudent']);

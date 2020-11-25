@@ -127,6 +127,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     - APIs
         - GET / GET Data From Database
         - POST => Save Data to Database
+        - PUT => Update Data (All parameters passed)
+        - PATCH => Update Data (Few parameters passed)
 
 
 ### Stackoverflow to the rescue
@@ -134,3 +136,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - https://stackoverflow.com/questions/41259651/general-error-1005-cant-create-table-foreign-key-constraint-is-incorrectly-fo
 
 - https://stackoverflow.com/questions/50221670/how-to-define-a-one-way-one-to-one-relationship-in-laravel-5-4-eloquent
+
+- https://stackoverflow.com/questions/28459418/use-of-put-vs-patch-methods-in-rest-api-real-life-scenarios
+
+
+### Other links
+- https://restfulapi.net/rest-put-vs-post

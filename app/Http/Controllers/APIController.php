@@ -39,6 +39,38 @@ class APIController extends Controller
                 'msg' => 'Form Not Saved'
             ];
         }
-        return Student::all();
+    }
+    public function editStudent(Request $request, $student_id)
+    {
+        if (!isset($request->username, $request->email, $request->password)) {
+            return [
+                'status' => -1,
+                'msg' => 'Please, fill in all fields!',
+            ];
+        } else {
+            $student = Student::find($student_id);
+            if (!$student) {
+                return [
+                    'status' => 0,
+                    'msg' => 'Student with specified ID not found'
+                ];
+            } else {
+                $student->username = $request->username;
+                $student->email = $request->email;
+                $student->password = $request->password;
+                $save = $student->save();
+                if ($save) {
+                    return [
+                        'status' => 1,
+                        'msg' => 'Updated!',
+                    ];
+                } else {
+                    return [
+                        'status' => 0,
+                        'msg' => 'Student Not Updated'
+                    ];
+                }
+            }
+        }
     }
 }
