@@ -115,6 +115,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     - Rollback in migration
     - Relationships
         - One to One 
+- **Day 6:**
+    - Relationships
+        - One to Many
 
 
 ### Stackoverflow to the rescue

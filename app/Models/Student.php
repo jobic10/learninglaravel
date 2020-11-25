@@ -14,6 +14,11 @@ class Student extends Model
         return $this->hasOne('App\Models\Phone');
     }
 
+    public function getElectives()
+    {
+        return $this->hasMany('App\Models\Elective');
+    }
+
     public function getEmailAttribute($value)
     {
         return ucfirst($value);

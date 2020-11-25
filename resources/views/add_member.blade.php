@@ -55,6 +55,7 @@
             <th>Username</th>
             <th>Email</th>
             <th>Phone</th>
+            <th>Electives</th>
             <th>Password</th>
             <th>Passport</th>
             <th>Action</th>
@@ -64,7 +65,14 @@
                 <td>{{ $student->id }}</td>
                 <td>{{ $student->username }}</td>
                 <td>{{ $student->email }}</td>
-                <td>{{ $student->phone->tel }}</td>
+                <td>{{ $student->phone->tel ?? 'No Phone Number Yet' }}</td>
+                <td>
+                    <ol>
+                        @foreach ($student->getElectives as $elective)
+                            <li>{{ $elective->name }}</li>
+                        @endforeach
+                    </ol>
+                </td>
                 <td>{{ $student->password }}</td>
                 <td><img height='80' width='80' src="{{ asset($student->passport) }}" /></td>
                 <td>
