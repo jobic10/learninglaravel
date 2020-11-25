@@ -89,4 +89,12 @@ class APIController extends Controller
                 return ['status' => -1, 'msg' => 'Student not deleted'];
         }
     }
+    public function searchStudent($username)
+    {
+        $query = Student::where('username', 'like', "%$username%")->get();
+        $count = count($query);
+        if ($count < 1)
+            return ['status' => -1, 'msg' => 'Student not found'];
+        return ['status' => 1, 'msg' => "$count record" . (($count > 1) ? 's' : '') . " found", 'count' => $count, 'data' => $query];
+    }
 }

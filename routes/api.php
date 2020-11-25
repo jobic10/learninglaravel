@@ -22,3 +22,4 @@ Route::get("getStudent", [APIController::class, 'getStudent']);
 Route::post("addStudent", [APIController::class, 'addStudent']);
 Route::patch("editStudent/{student_id}", [APIController::class, 'editStudent']);
 Route::delete("deleteStudent/{student_id}", [APIController::class, 'deleteStudent']);
+Route::get("searchStudent/{username}", [APIController::class, 'searchStudent']);
