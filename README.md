@@ -129,6 +129,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         - POST => Save Data to Database
         - PUT => Update Data (All parameters passed)
         - PATCH => Update Data (Few parameters passed)
+        - DELETE => Delete Data
 
 
 ### Stackoverflow to the rescue

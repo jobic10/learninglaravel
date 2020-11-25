@@ -73,4 +73,20 @@ class APIController extends Controller
             }
         }
     }
+    public function deleteStudent($student_id)
+    {
+        $student = Student::find($student_id);
+        if (!$student) {
+            return [
+                'status' => 0,
+                'msg' => 'Student with specified ID not found'
+            ];
+        } else {
+            $delete = $student->delete();
+            if ($delete)
+                return ['status' => 1, 'msg' => 'Student Deleted'];
+            else
+                return ['status' => -1, 'msg' => 'Student not deleted'];
+        }
+    }
 }
