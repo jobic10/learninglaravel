@@ -38,6 +38,7 @@ class showDB extends Command
      */
     public function handle()
     {
-        return $this->info("Current database is: " . DB::connection()->getDatabaseName());
+        echo "Current database is: ";
+        return $this->info(DB::connection()->getDatabaseName());
     }
 }
