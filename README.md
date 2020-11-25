@@ -121,6 +121,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     - Stub
         - Controller Stub
         - Model Stub
+    - Fluent Strings
 
 
 ### Stackoverflow to the rescue

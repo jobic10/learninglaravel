@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
+use Illuminate\Support\Str;
 
 use function PHPUnit\Framework\isNull;
 
@@ -11,6 +12,9 @@ class FirstController extends Controller
 {
     public function index()
     {
+        $data = "laravel learning day 5";
+        $data = Str::of($data)->lower()->snake("**")->replaceFirst('5', '6');
+        echo $data;
         return view('contact');
     }
     public function login(Request $request)
