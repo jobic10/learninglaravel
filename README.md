@@ -126,6 +126,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     - Creating Custom Command
     - APIs
         - GET / GET Data From Database
+        - POST => Save Data to Database
 
 
 ### Stackoverflow to the rescue
