@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Student;
 use Validator;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class APIController extends Controller
 {
@@ -109,5 +111,19 @@ class APIController extends Controller
         if ($count < 1)
             return ['status' => -1, 'msg' => 'Student not found'];
         return ['status' => 1, 'msg' => "$count record" . (($count > 1) ? 's' : '') . " found", 'count' => $count, 'data' => $query];
+    }
+    public function loginUSer(Request $request)
+    {
+        $user = User::where('email', $request->email)->first();
+        if (!$user || !Hash::check($request->password, $user->password)) {
+            return response(["msg" => "Invalid Credentials"], 404);
+        }
+        $token = $user->createToken('token')->plainTextToken;
+
+        $response = [
+            'user' => $user,
+            'token' => $token
+        ];
+        return response($response, 201);
     }
 }
