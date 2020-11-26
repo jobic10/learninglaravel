@@ -134,6 +134,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         - Validation
         - HTTP Response code. Used 401 for failed validations
 
+- **Day 7:**
+    - API With Sanctum - Created Seeder File For User's Table
+
 
 ### Stackoverflow to the rescue
 #### Be sure to check the Laravel version in these questions/answers
