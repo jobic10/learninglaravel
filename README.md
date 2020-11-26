@@ -138,6 +138,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     - Created Seeder File For User's Table
     - API With Sanctum
         - Generating tokens
+        - Using generated tokens to view API routes
 
 
 ### Stackoverflow to the rescue

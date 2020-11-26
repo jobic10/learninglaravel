@@ -17,10 +17,11 @@ use App\Http\Controllers\APIController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get("getStudent", [APIController::class, 'getStudent']);
-Route::post("addStudent", [APIController::class, 'addStudent']);
-Route::patch("editStudent/{student_id}", [APIController::class, 'editStudent']);
-Route::delete("deleteStudent/{student_id}", [APIController::class, 'deleteStudent']);
-Route::get("searchStudent/{username}", [APIController::class, 'searchStudent']);
+Route::group(['middleware' => 'auth:sanctum'], function () {
+    Route::get("getStudent", [APIController::class, 'getStudent']);
+    Route::post("addStudent", [APIController::class, 'addStudent']);
+    Route::patch("editStudent/{student_id}", [APIController::class, 'editStudent']);
+    Route::delete("deleteStudent/{student_id}", [APIController::class, 'deleteStudent']);
+    Route::get("searchStudent/{username}", [APIController::class, 'searchStudent']);
+});
 Route::post("login", [APIController::class, 'loginUSer']);
