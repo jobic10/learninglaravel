@@ -140,6 +140,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
         - Generating tokens
         - Using generated tokens to view API routes
 
+- **Day 8:**
+    - Finished setting up JetStream
 
 ### Stackoverflow to the rescue
 #### Be sure to check the Laravel version in these questions/answers

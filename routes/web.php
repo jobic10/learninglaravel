@@ -42,3 +42,6 @@ Route::get('delete/{id}', [FirstController::class, 'delStudent']);
 Route::match(['GET', 'POST'], 'update/{id}', [FirstController::class, 'updateStudent']);
 
 Route::get('student/{id}', [StudentController::class, 'index']);
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
