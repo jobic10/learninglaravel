@@ -142,6 +142,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 - **Day 8:**
     - Finished setting up JetStream
+  
+- **Day 9:**
+  - Maintenance Mode
 
 ### Stackoverflow to the rescue
 #### Be sure to check the Laravel version in these questions/answers
