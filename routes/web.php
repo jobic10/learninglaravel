@@ -31,7 +31,7 @@ Route::get('login', function () {
         return redirect('profile');
     }
     return view('login');
-});
+})->name('login');
 Route::view('profile', 'profile');
 Route::post('login/process', [FirstController::class, 'login']);
 Route::get('logout', [FirstController::class, 'logout']);
